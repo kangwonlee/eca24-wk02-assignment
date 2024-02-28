@@ -11,6 +11,7 @@
 
 * 직사각형의 넓이를 계산하여 반환하시오.
 * 해당 파이썬 스크립트 파일에는 해당 함수만 제출 바랍니다.
+* 참고문헌 : https://wikidocs.net/24#_3
 
 ## Github 온라인 편집기 사용법
 * <kbd>.</kbd> 키를 누르면 MS VS Code 의 Web version 이 시작됨
