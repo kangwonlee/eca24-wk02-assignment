@@ -21,6 +21,9 @@ sys.path.insert(
 import wk02
 
 
+random.seed()
+
+
 @pytest.fixture
 def prime_below_100() -> Tuple[int]:
     # https://thirdspacelearning.com/us/blog/what-is-a-prime-number/
