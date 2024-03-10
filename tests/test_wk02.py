@@ -31,7 +31,7 @@ def prime_below_100() -> Tuple[int]:
 
 
 @pytest.fixture
-def area(prime_below_100:Tuple[int]) -> int:
+def expected(prime_below_100:Tuple[int]) -> int:
     while True:
         a = random.randint(50, 100)
         if a not in prime_below_100:
@@ -39,11 +39,11 @@ def area(prime_below_100:Tuple[int]) -> int:
 
 
 @pytest.fixture
-def w_h(area:int) -> Tuple[int]:
-    max_w = int(math.sqrt(area))
+def w_h(expected:int) -> Tuple[int]:
+    max_w = int(math.sqrt(expected))
     for w in range(max_w, 1, -1):
-        if area % w == 0:
-            return (w, area // w)
+        if expected % w == 0:
+            return (w, expected // w)
 
 
 @pytest.fixture
@@ -51,5 +51,15 @@ def result(w_h:Tuple[int]) -> int:
     return wk02.wk02(*w_h)
 
 
-def test_wk02(result:int, w_h:Tuple[int], area:int):
-    assert result == area, f"result={result}, (w, h)={w_h}, area={area}"
+@pytest.fixture
+def width(w_h:Tuple[int]) -> int:
+    return w_h[0]
+
+
+@pytest.fixture
+def height(w_h:Tuple[int]) -> int:
+    return w_h[1]
+
+
+def test_wk02(result:int, width:Tuple[int], height:Tuple[int], expected:int):
+    assert result == expected, f"width={width}, height={height}, result={result}, expected={expected}"
