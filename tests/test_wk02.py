@@ -47,11 +47,6 @@ def w_h(expected:int) -> Tuple[int]:
 
 
 @pytest.fixture
-def result(w_h:Tuple[int]) -> int:
-    return wk02.wk02(*w_h)
-
-
-@pytest.fixture
 def width(w_h:Tuple[int]) -> int:
     return w_h[0]
 
@@ -59,6 +54,11 @@ def width(w_h:Tuple[int]) -> int:
 @pytest.fixture
 def height(w_h:Tuple[int]) -> int:
     return w_h[1]
+
+
+@pytest.fixture
+def result(width:int, height:int) -> int:
+    return wk02.wk02(width, height)
 
 
 def test_wk02(result:int, width:Tuple[int], height:Tuple[int], expected:int):
