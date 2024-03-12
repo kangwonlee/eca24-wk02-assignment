@@ -27,7 +27,7 @@ def test_function_only_in_py_file(py_file:pathlib.Path):
             continue
         if line.startswith('def ') and line_strip.endswith(':'):
             continue
-        assert line.startswith(' ') or line == ''
+        assert line.startswith(' ') or line_strip == ''
 
 
 @pytest.fixture
