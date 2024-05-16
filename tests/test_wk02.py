@@ -62,4 +62,15 @@ def result(width:int, height:int) -> int:
 
 
 def test_wk02(result:int, width:Tuple[int], height:Tuple[int], expected:int):
-    assert result == expected, f"width={width}, height={height}, result={result}, expected={expected}"
+    assert result == expected, (
+        f"Your function returned {result} when given a width of {width} and a height of {height}.\n"
+        f"함수 반환값: {result} 주어진 폭 {width} 높이 {height}.\n"
+        f"The expected result (area) was {expected}.\n"
+        f"에상되는 결과(면적): {expected}.\n"
+        "Please double-check your calculations and ensure you're correctly multiplying the width and height."
+        "계산을 다시 확인하고 폭과 높이를 올바르게 곱하고 있는지 확인바랍니다."
+    )
+
+
+if "__main__" == __name__:
+    pytest.main([__file__])
