@@ -17,7 +17,7 @@ def py_files() -> Tuple[pathlib.Path]:
 
 
 @pytest.mark.parametrize("py_file", py_files())
-def test_grammar(py_file:pathlib.Path):
+def test_syntax(py_file:pathlib.Path):
     
     code = py_file.read_text(encoding="utf-8")
     
