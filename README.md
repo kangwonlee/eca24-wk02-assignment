@@ -1,6 +1,6 @@
 ## wk02 area
 
-* Please edit file wk02.py<br>실습파일 : wk02.py
+* Please edit file exercise.py<br>실습파일 : exercise.py
 * Complete function `wk02()` as follows<br>함수 `wk02()`을 다음과 같이 완성하시오.
 * Accept following arguments<br>다음과 같은 매개변수를 받아들이시오 :
 
@@ -10,7 +10,7 @@ argument<br>매개변수 | type<br>변수형 | description<br>설명
 `height` | `int` | height of the rectangle<br>직사각형의 높이
 
 * Calcuate the area of the rectangle and return in `int` type<br>직사각형의 넓이를 계산하여 `int` 형으로 반환하시오.
-* Every line in the wk02.py python script file should belong to a function.<br>해당 파이썬 스크립트 파일에는 해당 함수만 제출 바랍니다.
+* Every line in the exercise.py python script file should belong to a function.<br>해당 파이썬 스크립트 파일에는 해당 함수만 제출 바랍니다.
 * 참고문헌 : https://wikidocs.net/24#_3
 
 ``From here is common to all assignments.``
