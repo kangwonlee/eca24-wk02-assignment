@@ -111,3 +111,6 @@ venv.bak/
 
 # config files
 *.cfg
+
+.DS_Store
+
